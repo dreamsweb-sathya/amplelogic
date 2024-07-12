@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-12 navigation-menu">
+            <app-sidemenu></app-sidemenu>
+        </div>
+        <div class="col-lg-9 col-md-12 dash-content p-4">
+            <div class="nav-header">
+                <nav class="navbar navbar-expand-lg rounded-pill">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="javascript:;">
+                            <span class="wave">👋</span>
+                            Hi, Tahlia!
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+                                <li class="nav-item notification-btn">
+                                    <a class="nav-link bi bi-bell-fill" href="javascript:;"> </a>
+                                </li>
+                                <li class="nav-item dropdown user-dropdown">
+                                    <div class="nav-link dropdown-toggle text-white d-flex" href="javascript:;" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="https://github.com/mdo.png" alt="@mdo" width="32" height="32"
+                                        class="rounded-circle me-2" loading="lazy">
+                                        <div>
+                                            <h6 class="mb-0">Tahlia Mooney</h6>
+                                            <p class="mb-0 small">tahliamooney@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="javascript:;">My Profile</a></li>
+                                        <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="javascript:;">login</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <router-outlet></router-outlet>
+            
+        </div>
+    </div>
+</div>

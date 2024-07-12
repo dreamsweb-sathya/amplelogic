@@ -1,0 +1,31 @@
+.dash-content {
+    background: #F9F9F9;
+}
+
+.dash-card .dash-table {
+    height: calc(100vh - 360px);
+}
+
+.dash-card .dash-table .table th {
+    color: #A9A9A9 !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dash-card .dash-table .table td,
+.dash-card .dash-table .table td a {
+    color: #2A2A2A !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dash-card {
+    padding: 20px;
+}
+
+.dash-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+ 

@@ -1,0 +1,36 @@
+.login-content{
+    background: url(../../../assets/images/login-bg.png) no-repeat;
+    object-fit: contain;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    .login-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+}
+.signInText{
+    font-weight: 400;
+    font-size: 30px;
+    color: #242424;
+}
+.signIn-control{
+    height: 50px;
+}
+ 
+.forgotpassword{
+    color: #D60000;
+    text-decoration: none;
+}
+ 
+.sign-btn{
+    height: 50px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.login-bottom{
+    background: #F9F9F9;
+}

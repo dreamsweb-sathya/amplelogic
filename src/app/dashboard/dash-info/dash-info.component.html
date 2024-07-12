@@ -1,0 +1,111 @@
+
+
+
+<div class="row">
+
+    <div class="col-lg-3 col-md-6 mt-4" *ngFor="let section of dashSections">
+        <div class="card dash-card">
+            <p class="text-secondary mb-0">
+                {{section.title}}
+            </p>
+            <h4>
+                {{section.count}}
+            </h4>
+            <p class="text-secondary mb-0">
+                <small>
+                    <strong [ngStyle]="{'color': section.color}">{{section.percent}}  </strong> 
+                    <span class="text-secondary">Since last month</span>
+                </small>
+            </p>
+        </div>
+    </div>
+     
+
+
+    <div class="col-lg-8 col-md-12 mt-4">
+        <div class="card dash-card">
+            <h4 class="dash-title">Latest projects</h4>
+
+            <div class="table-responsive dash-table">
+                <div class="spinner-border loading-animation" role="status" *ngIf="!projects" >
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name </th>
+                            <th>Due Date </th>
+                            <th>Status </th>
+                            <th>Completion </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let project of projects">
+                            <td>
+                                <small>
+                                    {{project.company.name}}
+                                </small>
+                            </td>
+                            <td>
+                                <small>
+                                    {{project.birthDate}}
+                                </small>
+                            </td>
+                            <td> 
+                                <small *ngIf="project.role == 'admin'">
+                                    Rejected
+                                </small>
+                                <small *ngIf="project.role == 'user'">
+                                    Completed
+                                </small>
+                                <small *ngIf="project.role == 'moderator'">
+                                    On Hold
+                                </small> 
+                                 
+
+                            </td>
+                            <td>
+                                <small *ngIf="project.role !== 'user'">
+                                    {{project.age}}%
+                                </small>
+                                <small *ngIf="project.role == 'user'">
+                                    100% 
+                                </small>
+                            </td>
+                            <td>
+                                <a href="javascript:;" class="bi bi-eye-fill"></a>
+                                <a href="javascript:;" class="bi bi-pencil ms-2"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 mt-4">
+        <div class="card dash-card">
+            <h4 class="dash-title">Top Performance</h4>
+            <div class="dash-table table-responsive">
+
+                <div class="spinner-border loading-animation" role="status" *ngIf="!projects" >
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+                <div class="list-group mb-3">
+                    <a class="list-group-item list-group-item-action d-flex align-items-center"
+                        href="javascript:;" *ngFor="let project of projects">
+                        <img src="https://github.com/mdo.png" alt="@mdo" width="32" height="32"
+                            class="rounded-circle me-2" loading="lazy">
+                        <span class="col-9 text-truncate">
+                            <strong>{{project.firstName +' '+ project.lastName }}</strong>
+                            <p class="mb-0 small">{{project.email}}</p>
+                        </span>
+                        <a href="javascript:;" class="bi bi-three-dots-vertical ms-auto"></a>
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

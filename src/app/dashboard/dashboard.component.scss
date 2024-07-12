@@ -1,0 +1,83 @@
+
+.navigation-menu{
+    background: rgb(111,79,244);
+background: linear-gradient(142deg, rgba(111,79,244,1) 0%, rgba(111,79,244,1) 77%, rgba(147,85,232,1) 100%);
+height: 100vh;
+}
+
+
+
+.nav-header {
+    .navbar {
+        background: #0F172A;
+        height: 58px;
+    }
+}
+
+.notification-btn a {
+    height: 35px;
+    width: 35px;
+    background: rgba(225, 225, 225, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    color: #FFF;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.wave {
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;
+    /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
+    /* Never stop waving :) */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+.nav-item.dropdown.user-dropdown {
+    .nav-link.dropdown-toggle {
+        &::after {
+            top: 18px;
+            position: relative;
+        }
+    }
+}
